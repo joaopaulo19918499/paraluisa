@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.</title>
+    <link rel="stylesheet" href="momento.css">
+    <link rel="shortcut icon" href="assets/taylor.jpg" type="image/x-icon">
+    <style>
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+
+        button {
+            display: inline-block;
+            background-color: hsl(98, 80%, 61%);;
+            padding: 10px;
+            width: 150px;
+            color: black;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="assets/nanip50.gif" alt="Um coração animado">
+    <p>Para Você</p>
+    <button id="yesButton" type="button">Abra</button>
+    <button id="Escutar" type="button">Escutar</button>
+    
+
+    <script src="dsdsds.js"></script>
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            var popup = document.createElement('div');
+            popup.id = 'popup';
+            popup.innerHTML = '<p>Eu sei que vacilei com você e fui um idiota em relação a tudo fui um babaca com você, e você não merecia isso, só que eu não vou aguentar Lulu eu gosto muito de você e não quero ficar dessa maneira com você, eu te quero,sei que é tarde e talvez eu esteja correndo atrás de algo que nunca mais vá acontecer, mas melhor eu falar tudo e tirar essa sensação do “e se” mesmo sabendo que a probabilidade de você me responder nessa altura do campeonato seja zero. Eu gosto muito de você e dá sua companhia Lulu você me faz um bem como eu disse que em pouco tempo eu nunca imaginaria, talvez seja besta pois as vezes palavras vagas não valem nada e sim as atitudes.<br> A primeira vez que eu sai com você foi incrível embora que eu seja medroso com filmes de terror eu amei te conhecer amei sua companhia mesmo que a gente naquela noite passamos muito pouco tempo juntos, mas eu senti que com você tudo foi mt diferente, eu gostava muito quando a gente ficava conversando de madrugada sobre várias coisas bestas e algumas outras coisas sérias e eu simplesmente não ligava a de chegar cansado/com sono do trabalho por causa disso pois era bom conversar com você, gostava muito quando você me mandava foto dos cachorrinhos que você dava banho e você ficava me contando quais cachorros são bravos ou não, gostava muito quando você ficava falando do jogo do palmeiras pra mim mesmo eu não gostando muito do seu time você fazia eu ter um pouco de carinho por ele, quando você me irritava embora eu ficasse bastante bravo com você eu amava pois podia fazer muita graça pra cima de você jkkk ou quando você vinha zoar o meu time pra me estressar jkkk, gostava muito também quando você cantava alguma música da Taylor Swift do meu lado mesmo que eu achava engraçado pq você levava isso muito a sério eu gostava de estar do seu lado nesse momento pois parecia algo muito especial pra você, gostava muito quando você me mandava as músicas que você estava ouvindo no momento e eu fazia questão de ir lá escutar mesmo que se fosse uma música da sua loirinha, amei aquela música do Bruno Mars “After Last Night” e eu literalmente não consigo não ouvir ela e não pensar em você principalmente quando chega na parte que fala “After last night, I think I’m in love with you”.<br> Me perdoa Luísa, sei que talvez seja muito tarde e talvez você nem queria nunca mais olhar na minha cara, mesmo eu indo naquela festa eu estava super desanimado pois não conseguia parar de pensar em você (ainda não consigo parar) e na merda que tinha feito, eu te peço desculpas novamente pela minha atitude, mas espero que você leia tudo isso pois não quero ficar com esse sentimento, estou escrevendo isso chorando (e por tudo que pareça eu nunca quis tando que essa parte do chorando fosse um drama) num domingo às 03:58 da manhã e provavelmente nesse exato momento você deve estar dormindo pois você tem Enem hoje, mas enfim espero que a gente possa conversar em alguma momento quando você quiser, não precisa me responder agora.<br> <br>Desculpas se você achar isso mal feito ainda não aprendi a programar para celular, mas clique em escutar por favor.<br> </p>';
+
+            document.body.appendChild(popup);
+        });
+
+        const playButton = document.getElementById('Escutar');
+
+// Cria uma nova instância do objeto de áudio
+const audio = new Audio('assets/Bruno_Mars_Anderson_Paak_Silk_Sonic_-_After_Last_Night.mp3');
+
+// Define a função de reprodução quando o botão for clicado
+playButton.addEventListener('click', function() {
+  // Verifica se a música já está tocando, pausa se estiver
+  if (audio.paused) {
+    audio.play();
+    playButton.textContent = 'Pausar "After Last Nigth"';
+  } else {
+    audio.pause();
+    playButton.textContent = 'Escutar';
+  }
+});
+    </script>
+    <style>
+        #Escutar {
+            display: inline-block;
+            background-color: hsl(98, 80%, 61%);;
+            padding: 10px;
+            width: 150px;
+            color: black;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        @keyframes moveButton {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            25% {
+                top: 10%;
+                left: 10%;
+            }
+            50% {
+                top: 10%;
+                left: 90%;
+            }
+            75% {
+                top: 90%;
+                left: 10%;
+            }
+            100% {
+                top: 90%;
+                left: 90%;
+           
+            }
+            
+        }
